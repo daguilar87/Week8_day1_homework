@@ -1,0 +1,23 @@
+.yfz{
+background-color: black ;
+    height: 60px;
+    color: white;
+}
+
+.logo{
+    height: 42px;
+    width: 95px;
+    border-radius: 8px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.butk{
+    background-color: azure;
+    
+}
+
+.butk:hover {
+    background-color: lightgreen;
+}
+

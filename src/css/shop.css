@@ -1,0 +1,20 @@
+.bg{
+    background-image: url(./media/pexels-crazy-motions-12920835.jpg);
+    width: 100%;
+}
+
+.pic{
+    height: 250px;
+    width: 250px;
+}
+
+.bgs{
+    background: transparent;
+}
+
+.card{
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    border-color: lightgray;
+}

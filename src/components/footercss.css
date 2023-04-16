@@ -1,9 +1,14 @@
-.footer {
+  .footer {
     background-color: black;
     color: white;
-    justify-content: space-around;
+    height:24px; 
+    width: 100%; 
     display: flex;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
+    justify-content: space-around;
+    background-attachment: scroll;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+
+}   
+
