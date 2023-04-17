@@ -6,8 +6,7 @@ import { useAuth, useUser, useSigninCheck, useDatabase } from "reactfire";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { get, child, ref } from "firebase/database";
 import logo1 from '../css/media/logo1.jpeg'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 
 const Nav = props => {
 
@@ -16,8 +15,8 @@ const Nav = props => {
     const auth = useAuth();
     
 
-    const { data: user } = useUser();  // this gets our user object
-    const { signinStatus } = useSigninCheck();  // is there a user signed in or not?
+    const { data: user } = useUser();
+    const { signinStatus } = useSigninCheck();  
 
     const db = useDatabase();
 
@@ -32,9 +31,6 @@ const Nav = props => {
         setCart({size:0, total:0, products: {}})
     }
 
-    // Whenever there's a render of nav (or re-render) we're going to check for a change in user status.
-    // if there was a change, we'll check the DB and update the cart
-    // useEffect(() => {}, [user]);  -----> bare example with dependency
     useEffect(() => {
         if (user){
             get(child(ref(db), `carts/${user.uid}`)).then((snapshot) => {

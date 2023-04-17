@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import './footercss.css';
 const Footer = () => {
     return (
@@ -6,9 +5,7 @@ const Footer = () => {
             
                 <div className="footer">
                     
-                    <Link className="nav-item nav-link active" to='#'>About Us</Link>
-                    <Link className="nav-item nav-link active" to='#'>Contact Us</Link>
-                    <Link className="nav-item nav-link active" to='#'>Help</Link>
+            <p>Copyright &copy; 2023 RandomStop</p>
                 
                   
                 </div>

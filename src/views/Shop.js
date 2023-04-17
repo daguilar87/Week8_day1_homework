@@ -52,7 +52,7 @@ const Shop = () => {
     return (
         <div className="bg">
             <div className="container bgs">
-            
+
                 <div className="row">
                     {/* this is where we'll throw in a bootstrap for each product */  console.log(products, typeof products)}
                     {typeof products === 'object' && !products.then ? products.map((product, index) => {
@@ -64,8 +64,8 @@ const Shop = () => {
                                 <p className="card-text">{product.description}</p>
                             </div>
                             <div className="card-body">
-                                <button href="#" className="card-link btn btn-success mb-2" onClick={() => addProduct(product)}>Add to cart!</button>
-                                <Link to={`/Sproduct/${product.id}`} className="card-link btn btn-primary"> View Item</Link>
+                                <button href="#" className="card-link btn butk1" onClick={() => addProduct(product)}>Add to cart!</button>
+                                <Link to={`/Sproduct/${product.id}`} className="card-link btn butk"> View Item</Link>
 
 
 

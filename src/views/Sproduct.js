@@ -4,7 +4,9 @@ import axios from "axios";
 import { DataContext } from "../context/DataProvider";
 import { useDatabase, useUser } from "reactfire";
 import { ref, set } from "firebase/database";
-
+import { Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import '../css/sproduct.css'
 
 const Sproduct = () => {
     const { productId } = useParams();
@@ -21,7 +23,7 @@ const Sproduct = () => {
             try {
                 const response = await axios.get(local_url);
                 if (response.status === 200) {
-                    setData(response.data); 
+                    setData(response.data);
                 } else {
                     console.log("API call failed with status:", response.status);
                 }
@@ -30,8 +32,8 @@ const Sproduct = () => {
             }
         };
 
-        fetchData(); 
-    }, [local_url]); 
+        fetchData();
+    }, [local_url]);
 
     const loadProductData = async () => {
         try {
@@ -46,7 +48,8 @@ const Sproduct = () => {
         }
     }
 
-    const [response] = useState(() => loadProductData());
+    useEffect(() => { loadProductData(); }, [local_url]);
+
 
     const { cart, setCart } = useContext(DataContext);
 
@@ -68,19 +71,26 @@ const Sproduct = () => {
     if (!data) {
         return <div>Loading...</div>;
     }
-    
+
     return (
-        <div>
-            <h1>Individual Product</h1>
-            <h1>Item ID: {data.id}</h1>
-            <h2>Title: {data.title}</h2>
-            <h3>Price: {data.price}</h3>
-            <p>Description: {data.description}</p>
-            <p><img src= { data.image }
-                      className="card-img-top" /></p>
-            <button href="#" className="card-link btn btn-success mb-2" onClick={() => addProduct(data)}>Add to cart!</button>
+        <div className="bg1">
+            <div className="sview">
+                <Card style={{ width: '18rem' }} >
+                    <Card.Img variant="top" src={data.image} className="img" />
+                    <Card.Body>
+                        <Card.Title className="info">{data.title}</Card.Title>
+                        <Card.Text className="info1">
+                            <h6>{data.description} {'\n'}</h6>
+                            <h6>Price: ${data.price}</h6>
+                        </Card.Text>
+                        <Button href="#" className="card-link btn butk3" onClick={() => addProduct(data)}>Add to cart!</Button>
+                    </Card.Body>
+                </Card>
+            </div>
         </div>
     );
+
+
 };
 
 export default Sproduct;

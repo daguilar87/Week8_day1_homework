@@ -1,11 +1,15 @@
 .bg{
     background-image: url(./media/pexels-crazy-motions-12920835.jpg);
     width: 100%;
+    height: 100%;
+    background-repeat: repeat;
 }
 
 .pic{
     height: 250px;
     width: 250px;
+    border-radius: 10px;
+    margin: 3px;
 }
 
 .bgs{
@@ -17,4 +21,25 @@
     color: white;
     border-radius: 20px;
     border-color: lightgray;
+}
+
+.butk{
+    background-color: rgb(13, 145, 221);
+    margin-top: 10px;
+    font-weight: 800;
+    margin-right: 15px;
+}
+
+.butk1{
+    background-color: rgb(13, 145, 221);
+    margin-bottom: 10px;
+    font-weight:800;
+}
+
+.butk1:hover {
+    background-color: lightgreen;
+}
+
+.row{
+    margin-left: 110px;
 }
