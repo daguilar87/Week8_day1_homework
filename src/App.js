@@ -6,6 +6,7 @@ import Home from './views/Home';
 import Shop from './views/Shop';
 import Cart from './views/Cart';
 import Sproduct from './views/Sproduct';
+import Checkout from './views/Checkout';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
         <Route childern path='/shop' element={<Shop />}  />
         <Route childern path='/cart' element={<Cart />}  />
         <Route childern path='/Sproduct/:productId' element={<Sproduct />}  />
+        <Route childern path='/checkout' element={<Checkout />}  />
+
         
       </Routes>
       <Footer />

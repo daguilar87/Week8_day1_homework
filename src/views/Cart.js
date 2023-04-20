@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import '../css/cart.css';
 import { useDatabase, useUser } from "reactfire";
 import { set, ref } from "firebase/database";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -59,7 +60,7 @@ const Cart = () => {
     return (
         <div className="bg1">
             <div className="out">
-                <Button variant="primary">Checkout </Button> 
+                <Link variant="primary"to="/checkout" className="btn btn-primary"> Checkout </Link> 
                 <span></span>
                 <Button variant="danger" onClick={clearCart}>
                     Clear Cart

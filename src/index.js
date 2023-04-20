@@ -8,15 +8,23 @@ import { BrowserRouter } from 'react-router-dom';
 import ProviderLayer from './ProviderLayer';
 import { FirebaseAppProvider } from 'reactfire';
 
+const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
+const FIREBASE_AUTH_DOMAIN = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
+const FIREBASE_PROJECT_ID = process.env.REACT_APP_FIREBASE_PROJECT_ID;
+const FIREBASE_STORAGE_BUCKET = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET;
+const FIREBASE_MESSAGE_ID = process.env.REACT_APP_FIREBASE_MESSAGE_ID;
+const FIREBASE_APP_ID = process.env.REACT_APP_FIREBASE_APP_ID;
+const FIREBASE_DB_URL = process.env.REACT_APP_FIREBASE_DB_URL;
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB91Qw6GqOEBJjpBLauI_Cu33gR0iXQayg",
-  authDomain: "randomstore-f68f7.firebaseapp.com",
-  databaseURL: "https://randomstore-f68f7-default-rtdb.firebaseio.com",
-  projectId: "randomstore-f68f7",
-  storageBucket: "randomstore-f68f7.appspot.com",
-  messagingSenderId: "161677097094",
-  appId: "1:161677097094:web:e870597e62306f2aba3907",
-  measurementId: "G-Z862L32BPC"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGE_ID,
+  appId: FIREBASE_APP_ID,
+  databaseURL: FIREBASE_DB_URL,
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
